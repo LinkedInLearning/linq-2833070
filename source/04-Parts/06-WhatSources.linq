@@ -5,4 +5,4 @@ var colors = new List<string>
 		   "White", "Black", "Blue" ,"Bronze"};
 
 
-// write pipe lind example
+// write pipeline example

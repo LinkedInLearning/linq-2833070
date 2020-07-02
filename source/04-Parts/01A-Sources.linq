@@ -1,4 +1,6 @@
-<Query Kind="Statements" />
+<Query Kind="Statements">
+  <Reference>&lt;RuntimeDirectory&gt;\System.Linq.dll</Reference>
+</Query>
 
 // show all types that implement 
 // the IEnumerable (LINQ) interface in msCorLib
