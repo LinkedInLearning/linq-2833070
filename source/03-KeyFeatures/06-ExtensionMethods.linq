@@ -15,17 +15,17 @@ void Main()
 	{
 		Console.WriteLine("The collection has items");
 	}
-	
-	
-	
+
+	colors.GetRandomElement().Dump();
+	colors.Shuffle().Dump();
 
 }
 
 // Define other methods and classes here
 
- static class CollectionExtensions
+static class CollectionExtensions
 {
-
+	private static readonly Random _ran = new Random();
 	public static void ShowItems<T>(this IEnumerable<T> collection)
 	{
 		Console.WriteLine();
@@ -49,5 +49,16 @@ void Main()
 			collection.Add(item);
 		}
 	}
+
+	public static T GetRandomElement<T>(this ICollection<T> array)
+	{
+		return array.ElementAt(_ran.Next(array.Count));
+	}
+
+	public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> candidate)
+	{
+		return candidate.OrderBy(x => _ran.NextDouble());
+	}
+
 
 }

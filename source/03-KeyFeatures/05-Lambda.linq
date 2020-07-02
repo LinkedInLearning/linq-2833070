@@ -14,10 +14,10 @@ Console.WriteLine(adderA(5));
 adderB = (Int32 n) => n + 1;
 Console.WriteLine(adderB(10));
 
-// Parameter type is omitted and inferred
+// Parameter type is inferred
 adderC = (n) => n + 1;
 Console.WriteLine(adderC(15));
 
-// If there is just one parameter, parenthesis can be omitted
+// When there is one parameter, parenthesis can be omitted
 adderD = n => n + 1;
 Console.WriteLine(adderD(20));
