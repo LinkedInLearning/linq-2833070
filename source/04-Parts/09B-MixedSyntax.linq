@@ -4,7 +4,7 @@ var colors = new List<string>
 		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
 		   "White", "Black", "Blue" ,"Bronze"};
 
-var numbers = 
+
 
 // From Microsoft docs:
 
@@ -14,5 +14,15 @@ var numbers =
 // For example, you must use a method call to express a query 
 // that retrieves the number of elements that match a specified condition
 
-var q = from color in colors
-		where color.StartsWith
+var q1 = from color in colors
+		where color.StartsWith("B")
+		select color;
+
+q1.Dump();
+
+
+// use an extension method on query varible
+
+var count = q1.Count();
+
+count.Dump("Count method");

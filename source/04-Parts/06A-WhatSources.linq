@@ -5,4 +5,5 @@ var colors = new List<string>
 		   "White", "Black", "Blue" ,"Bronze"};
 
 
-// write pipeline example
+// Arrays are a special case
+// 
