@@ -15,6 +15,7 @@ void Main()
 	ShowType(theChar, nameof(theChar));
 
 	Console.WriteLine();
+	
 	// simplifies typing longer type names on left side of declaration
 	SortedDictionary<String, Guid> guids1 = new SortedDictionary<String, Guid>();
 	// versus

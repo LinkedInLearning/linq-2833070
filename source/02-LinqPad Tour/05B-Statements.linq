@@ -1,4 +1,7 @@
-<Query Kind="Statements" />
+<Query Kind="Statements">
+  <Reference>&lt;RuntimeDirectory&gt;\System.Linq.dll</Reference>
+  <Namespace>System.Data</Namespace>
+</Query>
 
 // LINQPad supports multiple lines
 // with the Statement editor

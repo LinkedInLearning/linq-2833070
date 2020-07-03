@@ -6,14 +6,14 @@
 // Outputs formatted data to the results window
 
 int x = 65;
-bool isBig = x > 1000;
-string isBigString = isBig ? "Big Number" : "Small number";
+bool isLargeNumber = x > 1000;
+string isLargeResult = isLargeNumber ? "Large Number" : "Small number";
 
 x.Dump();
 
 //// add header
 //x.Dump("X value");
 //
-//isBig.Dump ("IsBig");
+//isLargeNumber.Dump ("isLargeNumber");
 //
-//isBigString.Dump("isBigString");
+//isLargeResult.Dump("isLargeResult");
