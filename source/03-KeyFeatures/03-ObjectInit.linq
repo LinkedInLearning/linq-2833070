@@ -6,13 +6,12 @@ void Main()
 
 	var h1 = new House();
 
-
 	var h2 = new House();
 	h2.Floors = 2;
 
 	var h3 = new House { Bathrooms = 2 };
-	var h4 = new House { PaintColor = "Brown" };
-	var h5 = new House { PaintColor = "Yellow", Floors = 3 };
+	var h4 = new House { ExternalPaintColor = "Brown" };
+	var h5 = new House { ExternalPaintColor = "Yellow", Floors = 3 };
 	
 	
 }
@@ -23,7 +22,7 @@ public class House
 {
 	public int Floors;
 	public int Bathrooms;
-	public string PaintColor;
+	public string ExternalPaintColor;
 
 	
 }

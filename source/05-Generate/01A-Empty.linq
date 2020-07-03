@@ -10,7 +10,8 @@
 var listOfDates1 = Enumerable.Empty<DateTime>(); 
 
 listOfDates1.GetType().Name.Dump("listOfDates1 Type");
-listOfDates1.Dump();
+listOfDates1.Count().Dump("Count of Array");
+listOfDates1.Dump("Array contents");
 
 
 List<DateTime> listOfDates2 = Enumerable.Empty<DateTime>().ToList();

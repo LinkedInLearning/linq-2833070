@@ -23,4 +23,3 @@ colors.Add("Coral");
 
 // run the query again, what do you see?
 q.Dump("second run");
-

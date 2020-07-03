@@ -5,7 +5,7 @@
 // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/
 // .NET allows for creating generic classes, methods, interfaces, delegates
 
-// the type author creates the generice item
+// the type author creates the generic item
 
 // the type user specifies the concrete type
 

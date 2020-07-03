@@ -6,7 +6,8 @@
 
 // Lambda syntax with statement body
 // can consist of any number of statements
-Func<int, int> adderA, adderB, adderC, adderD;
+Func<Int32, Int32> adderA, adderB, adderC, adderD;
+
 adderA = (Int32 n) => { n += 2; return n + 1; };
 Console.WriteLine(adderA(5));
 

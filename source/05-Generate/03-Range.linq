@@ -9,5 +9,5 @@ numbers.Dump();
 
 // transform
 
-
-odds.Dump();
+//var odds = Enumerable.Range(start: 1000, count: 30).Where(e => e % 2 ==1 );
+//odds.Dump();

@@ -2,27 +2,20 @@
 
 var colors = new List<string>
 		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
-		   "White", "Black", "Blue" ,"Bronze"};
+		   "White", "Black", "Blue" ,"Bronze", "Gray"};
+
+var q1 = colors.Where(c => c.StartsWith("G"));
+
+var q2 = from color in q1
+		 orderby color
+		 select color;
 
 
+q2.Dump();
 
-// From Microsoft docs:
+// use Count on Query Expression
 
-// Query syntax and method syntax are semantically identical, 
-// but many people find query syntax simpler and easier to read. 
-// Some queries must be expressed as method calls. 
-// For example, you must use a method call to express a query 
-// that retrieves the number of elements that match a specified condition
-
-var q1 = from color in colors
-		where color.StartsWith("B")
-		select color;
-
-q1.Dump();
-
-
-// use an extension method on query varible
-
-var count = q1.Count();
-
-count.Dump("Count method");
+var q3 = (from color in colors
+		  where color.StartsWith("G")
+		  select color).Count();
+q3.Dump();

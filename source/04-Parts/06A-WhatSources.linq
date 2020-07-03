@@ -5,5 +5,3 @@ var colors = new List<string>
 		   "White", "Black", "Blue" ,"Bronze"};
 
 
-// Arrays are a special case
-// 

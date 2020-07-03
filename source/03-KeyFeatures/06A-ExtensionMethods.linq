@@ -7,17 +7,8 @@ void Main()
 
 	var numbers = new[] { 2, 4, 6, 8 };
 	numbers.ShowItems();
+	
 	// numbers.Dump("My custom header");
-
-	numbers.ShowItems();
-
-	if (!colors.IsItEmpty())
-	{
-		Console.WriteLine("The collection has items");
-	}
-
-	colors.GetRandomElement().Dump();
-	colors.Shuffle().Dump();
 
 }
 

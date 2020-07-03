@@ -9,7 +9,7 @@ var numbers = new List<int> { 2, 4, 6, 8, 100, 200, 300, 1, 3, 5, 7, 400 };
 // from varname in sequence
 
 var q1 = from n in numbers
-		 select n;
+		 			select n;
 
 q1.Dump("Simple pass through query");
 
