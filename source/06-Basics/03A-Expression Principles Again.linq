@@ -23,5 +23,5 @@ IEnumerable<string> q2 = from c in colors
 												 orderby c
 												 select c;
 												 
-q1.Dump();
-q2.Dump();
+q1.Dump("<string>");
+q2.Dump("<string>");

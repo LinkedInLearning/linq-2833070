@@ -9,7 +9,7 @@
 
 // 2. Takes a sequence, returns a new sequence containing a different type of element.
 //    Transforms the object into another type.
-//    Integers to Strings, Products to Strings
+//    Integers to Decimals, Products to Strings
 
 // 3. Takes a sequence, returns a single value.
 //    AKA (fold, reduce, aggregate, accumulate, etc.)

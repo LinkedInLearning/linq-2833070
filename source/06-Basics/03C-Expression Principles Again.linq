@@ -1,8 +1,9 @@
 <Query Kind="Statements" />
 
-// 2. Takes a sequence, returns a new sequence containing a different type of element.
-//    Transforms the object into another type.
-//    Integers to Strings, Products to Strings
+// 3. Takes a sequence, returns a single value.
+//    AKA (fold, reduce, aggregate, accumulate, etc.)
+//		reduces a list of data to a aggregate value
+//    min, max, sum
 
 IEnumerable<string> colors = new List<string>
 		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
