@@ -1,20 +1,19 @@
-<Query Kind="Expression" />
+<Query Kind="Statements">
+  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Namespace>System.Runtime.Serialization</Namespace>
+</Query>
 
 // Enumerable.Cast
 // attempts to cast each item to specified type.
 // throws an InvalidCastException if not successful
 
-// simplified implementation of CAST
 
-public IEnumerable<T> Cast<T>(this IEnumerable source)
-{
-	foreach (object o in source)
-		yield return (T)o;
-}
-
-// Enumerable.OfType
-// filters the sequence to type that can be cast to specified type
-
-// OfType is slower, as it has to enumerate the sequence and verify each item is castable
-
-
+// OfType operator is used to return only the elements of a specified type.
+var q = from card in CourseLib.CardSource.GetCards()
+				select card;
+				
+		
+var monstersOnly = q.OfType<CourseLib.Cards.Monster>();
+monstersOnly.Select(c => new {c.Name, c.ListPrice, c.TypeName}).Dump();
+q.OfType<ISerializable>().Dump();
+q.Dump();

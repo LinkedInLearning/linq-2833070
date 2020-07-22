@@ -19,4 +19,3 @@
 
 // use this data source
 // CourseLib.ColorSource.GetColors()
-
