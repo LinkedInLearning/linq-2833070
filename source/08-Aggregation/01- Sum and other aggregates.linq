@@ -1,7 +1,7 @@
 <Query Kind="Statements" />
 
 // aggregate, given a sequence (a,b,c,d,e)
-// perform an operation with eqch sucessive pair
+// perform an operation with each sucessive pair
 
 // result = operation(a, b)
 // result = operation (b, result)

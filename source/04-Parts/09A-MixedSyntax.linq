@@ -19,7 +19,7 @@ var q1 = from color in colors
 q1.Dump();
 
 
-// use an extension method on query varible
+// use an extension method on query variable
 
 var count = q1.Count();
 

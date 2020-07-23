@@ -11,7 +11,8 @@
 
 // instead use the group by clause
 
-var distinctColors = CourseLib.ColorSource.GetColors().Distinct().ToList();
+//var hexValues = CourseLib.ColorSource.GetColors().Select(x=>x.HexValue);
+//hexValues.Distinct().Dump();
 
 var q1 = from color in CourseLib.ColorSource.GetColors()
 				 group color by color.HexValue into hex

@@ -9,5 +9,4 @@ var fiveCount = new List<int> { 0, 5, 10, 15, 20, 25, 30};
 
 fiveCount.ElementAt(1).Dump ("ElementAt 1");
 
-fiveCount.ElementAt(4).Dump ("ElementAt 4");
-
+fiveCount.ElementAtOrDefault(22).Dump ("ElementAt 4");

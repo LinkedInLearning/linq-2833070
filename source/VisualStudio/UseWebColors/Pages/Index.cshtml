@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Home page";
+}
+
+
+<div class="text-center">
+	<h1 class="display-4">Use WebColors from LINQ</h1>
+	<form method="post" class="col-6">
+		<div class="form-row">
+			<div class="form-group">
+				<label asp-for="@Model.ColorFamilies" class="label "></label>
+				<select asp-items="@Html.GetEnumSelectList<CourseLib.ColorFamily>()" asp-for="CurrentColorFamily" ></select>
+				<button class="btn btn-primary">Change Color Family</button>
+			</div>
+			
+		</div>
+	</form>
+
+	<table class="table  table-bordered table-condensed">
+		@foreach (var color in Model.WebColors)
+		{
+
+			<tr style="background-color: #@color.HexValue">
+				<td>@color.ColorFamily</td>
+				<td><b>@color.ColorName  </b>    </td>
+				<td>@color.HexValue      </td>
+				<td>
+					@*<a class="btn btn-outline-primary"
+						asp-page="ShowTourStop"
+						asp-route-stopnumber='@tourStop.StopNumber'>Details...</a>*@
+				</td>
+			</tr>
+		}
+
+	</table>
+
+</div>

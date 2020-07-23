@@ -1,6 +1,6 @@
 <Query Kind="Statements" />
 
-// basus knowledge of generics is key to work with LINQ
+// basic knowledge of generics is key to work with LINQ
 
 // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/
 // .NET allows for creating generic classes, methods, interfaces, delegates

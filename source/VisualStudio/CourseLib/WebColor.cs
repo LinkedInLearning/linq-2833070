@@ -56,7 +56,8 @@ namespace CourseLib
 		Purple,
 		Pale,
 		Brown,
-		Gray
+		Gray,
+
 	}
 	
 }
