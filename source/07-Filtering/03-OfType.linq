@@ -3,11 +3,6 @@
   <Namespace>System.Runtime.Serialization</Namespace>
 </Query>
 
-// Enumerable.Cast
-// attempts to cast each item to specified type.
-// throws an InvalidCastException if not successful
-
-
 // OfType operator is used to return only the elements of a specified type.
 var q = from card in CourseLib.CardSource.GetCards()
 				select card;

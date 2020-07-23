@@ -4,12 +4,9 @@
 
 void Main()
 {
-	// The Where clause filters the list based on a predicate function to each element in the sequence.
-	// define a predicate that uses a boolean expression to determine what to return in filtered sequence
-
 
 	var q = from color in CourseLib.ColorSource.GetColors()
-					
+
 					where IsColorTotalLessThan(color, 1.5)
 					select new
 					{
@@ -17,10 +14,12 @@ void Main()
 						color.BluePercent,
 						color.GreenPercent,
 						color.RedPercent,
-						TotalPercent = color.BluePercent + color.GreenPercent + color.RedPercent
+						TotalPercent = color.BluePercent +
+													 color.GreenPercent +
+													 color.RedPercent
 					};
 
-	q.OrderBy(x=>x.TotalPercent).Dump();
+	q.OrderBy(x => x.TotalPercent).Dump();
 
 
 }
