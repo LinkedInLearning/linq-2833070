@@ -24,8 +24,8 @@
 // Suggestion, look at using anonymous type for the group criteria
 // 
 var colors = CourseLib.ColorSource.GetColors();
-// color.RedValue > 100
+
 var q = from color in colors
-				group color by color.RedPercent;
+				group color by color.HSL.Saturation;
 
 q.Dump();

@@ -3,16 +3,16 @@
 </Query>
 
 var colors = CourseLib.ColorSource.GetColors();
-// Any:  Determines whether any element of a sequence exists or satisfies a condition.
+// Any: Determines whether any element of a sequence exists or satisfies a condition.
 //       Stops evaluation as soon as it find member that satisfies
-//
+// Takes an predicate as a parameter
 
 
-bool hasMatchingItem = colors.Any(w => w.ColorName.Contains("le"));
-hasMatchingItem.Dump("'le' found");
+bool hasMatchingItem = colors.Any(w => w.ColorName.StartsWith("C"));
+hasMatchingItem.Dump("'C' found");
 
 var q = from c in colors
-				where c.ColorName.Contains("le")
+				where c.ColorName.StartsWith("C")
 				select c.ColorName;
 				
 q.Dump();

@@ -4,10 +4,14 @@
   <Namespace>MoreLinq</Namespace>
 </Query>
 
-var numbers =  Enumerable.Range (0,200);
+var numbers = new List<int> { 1, 3, 5, 7 };
 
 
-// Returns every N-th element of a source sequence
-var resultA = numbers.TakeEvery(8);
+// Returns a sequence of elements in random order from the original sequence.
+var resultA = numbers.Shuffle();
 resultA.Dump();
 
+// Generates a sequence of lists that represent the permutations of the original sequence
+var resultB = numbers.Permutations();
+
+resultB.Dump();

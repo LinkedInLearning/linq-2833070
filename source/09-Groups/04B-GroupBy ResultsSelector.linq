@@ -3,12 +3,15 @@
 </Query>
 
 // var groupedByColorFamily = colors.GroupBy(keySelector: x => x.ColorFamily,
-//                                           elementSelector: y => new { y.ColorName, y.HexValue });
+//                               elementSelector: y => new { y.ColorName, y.HexValue });
 var colors = CourseLib.ColorSource.GetColors();
 
 var q = from color in colors
-				let colorShort = new {color.ColorName, color.HexValue, color.ColorFamily} // element selector
-				group colorShort by colorShort.ColorFamily; // key selector
-				
+				let colorShort = new { color.ColorName, color.HexValue, color.ColorFamily } 
+				group colorShort by colorShort.ColorFamily // key selector
+				into familyGroup // variable used in resultSelector
+				// result selector
+				select new { Family = familyGroup.Key, Colors = familyGroup }; 
+
 
 q.Dump();

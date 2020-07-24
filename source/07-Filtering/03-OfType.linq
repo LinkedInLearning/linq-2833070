@@ -9,6 +9,6 @@ var q = from card in CourseLib.CardSource.GetCards()
 				
 		
 var monstersOnly = q.OfType<CourseLib.Cards.Monster>();
-monstersOnly.Select(c => new {c.Name, c.ListPrice, c.TypeName}).Dump();
-q.OfType<ISerializable>().Dump();
+//monstersOnly.Select(c => new {c.Name, c.ListPrice, c.TypeName}).Dump();
+//q.OfType<ISerializable>().Dump();
 q.Dump();

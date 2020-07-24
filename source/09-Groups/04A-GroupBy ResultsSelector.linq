@@ -2,13 +2,12 @@
   <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
-// Query expressions must end with a select or groupby clause!
-
-// Let's start with the GroupBy extension method
+// Change the key name or value name 
+// with the resultSelector
 var colors = CourseLib.ColorSource.GetColors();
-// use element selector to specify what properties on subgroup
-
+// use result selector to customize the generated sequence
 var groupedByColorFamily = colors.GroupBy(keySelector: x => x.ColorFamily,
-														 elementSelector: y => new { y.ColorName, y.HexValue });
+								elementSelector: y => new { y.ColorName, y.HexValue },
+								resultSelector: (key, value) => new {Family= key, Colors= value });
 
 groupedByColorFamily.Dump();

@@ -3,6 +3,7 @@
 </Query>
 
 // Contains:  return whether a specified item is contained in the sequence.
+// takes a object as a parameter
 var numbers = new List<int> { 24, 18, 16, 76, 14, 24, -10 };
 var containsNumber = numbers.Contains(14);
 

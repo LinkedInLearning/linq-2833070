@@ -5,11 +5,14 @@
 var colors = CourseLib.ColorSource.GetColors();
 
 var q1 = from color in colors
-				group color by new { color.BlueValue, color.GreenValue}; // key selector
+				 group color by Math.Round(color.RedPercent, 2); // key selector
 
 
 var q2 = from color in colors
-				group color by Math.Round(color.RedPercent, 2); // key selector
+				group color by new { color.BlueValue, color.GreenValue}; // key selector
 
-//q1.Dump();
-q2.Dump();
+
+
+
+q1.Dump();
+//q2.Dump();
