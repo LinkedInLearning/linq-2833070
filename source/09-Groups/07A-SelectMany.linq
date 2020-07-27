@@ -3,7 +3,7 @@
 </Query>
 
 // SelectMany flattens a one-many relationship
-// or sayical it another way , it can ucalroup nested sequences
+// or saying it another way , it can ungroup nested sequences
 void Main()
 {
 	HistoryCalendar cal;
